@@ -27,5 +27,6 @@ with DAG(
                 executor_cores='4'
     )
 
+print(f"-------- This task is running under this path: {os.getcwd()} ---------------")
 
 spark_submit_local
