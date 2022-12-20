@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator 
+import os
 
 
 default_args = {
