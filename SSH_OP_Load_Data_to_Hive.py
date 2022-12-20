@@ -25,7 +25,7 @@ with DAG(
     ssh_task = SSHOperator(
 		        ssh_conn_id= 'ssh_default', 
 		        task_id='ssh_submit_task', 
-                command= access_spark_pod_cmd+" && "+change_hadoop_user_cmd+spark_submit_cmd,
+                command= access_spark_pod_cmd+change_hadoop_user_cmd+" && "+spark_submit_cmd,
 		        dag=dag
     )
 
